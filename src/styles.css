@@ -121,4 +121,7 @@ img {
 
 .footer {
   color: #fff;
+  text-align: center;
+  display: block;
+  width: 70%;
 }

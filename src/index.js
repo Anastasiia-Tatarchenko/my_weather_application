@@ -17,7 +17,7 @@ function formatDate() {
     "Sep",
     "Oct",
     "Nov",
-    "Dec"
+    "Dec",
   ];
 
   let month = months[now.getMonth()];
@@ -39,7 +39,8 @@ formatDate();
 
 function displayWeather(response) {
   console.log(response.data);
-  document.querySelector("#current-city").innerHTML = response.data.name;
+  document.querySelector("#current-city").innerHTML =
+    response.data.name + " , " + response.data.sys.country;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
